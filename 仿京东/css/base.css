@@ -1,0 +1,499 @@
+@charset "utf-8";
+/* CSS Document */
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑", " 宋体", " 黑体"
+}
+fieldset, img, input, button {
+	border: none;
+	padding: 0;
+	margin: 0;
+	outline-style: none;
+}
+ul, ol {
+	list-style: none;
+}
+input {
+	padding-top: 0;
+	padding-bottom: 0;
+	font-family: "SimSun", "微软雅黑", "宋体";
+}
+select, input {
+	vertical-align: middle;
+}
+select, input, textarea {
+	font-size: 12px;
+	margin: 0;
+}
+textarea {
+	resize: none;
+} /*防止拖动*/
+img {
+	border: 0;
+	vertical-align: middle;
+}  /*  去掉图片低测默认的3像素空白缝隙*/
+table {
+	border-collapse: collapse;
+}
+body {
+	font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+	color: #666;
+	background: #eee;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+ *zoom:1;/*IE/7/6*/
+}
+a {
+	color: #999;
+	text-decoration: none;
+}
+a:hover {
+	color: #f10215;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 100%;
+}
+s, i, em {
+	font-style: normal;
+	text-decoration: none;
+}
+.col-red {
+	color: #f10215!important;
+}
+/*公共类*/
+.w {  /*版心 提取 */
+	width: 1190px;
+	margin: 0 auto;
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+.al {
+	text-align: left
+}
+.ac {
+	text-align: center
+}
+.ar {
+	text-align: right
+}
+.hide {
+	display: none
+}
+
+
+/**************************  body  **************************************/
+/**头部广告区域*/
+.hdad {
+	width: 100%;
+	height: 80px;
+	background: #58dfd1;
+}
+.hdad .w {
+	height: 80px;
+	position: relative;
+}
+.hdad .w a {  /***banner**/
+	display: block;
+	width: 1190px;
+	height: 80px;
+	background: url(../image/header.jpg) no-repeat center;
+}
+.hdad .w i {/****close关闭按钮*****/
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: rgb(45,45,45);
+	opacity: 0.3;
+	color: #fff;
+	font-size: 30px;
+	line-height: 20px;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	right: 0;
+	cursor: pointer		
+}
+
+
+/***头部导航开始*/
+.shortcut {
+	height: 30px;
+	background: #e3e4e5;
+	border-bottom: 1px solid #ddd;
+	line-height: 30px;
+}
+.shortcut .w {
+	font-weight: 400;
+	color: #999;
+}
+/***头部导航左边***/
+.shortcut .w .fl {
+	margin-left: 210px;
+}
+.shortcut .w .fl i {
+	color: red;
+	padding-right: 4px;
+}
+/**头部导航右边**/
+.shortcut li {
+	float: left;
+	padding: 0 10px;
+}
+.shortcut .line {/*******直线********/
+	width: 1px;
+	height: 10px;
+	background: #ccc;
+	margin-top: 10px;
+	padding: 0
+}
+.shortcut .mob {/***手机京东***/
+	position: relative;
+	z-index: 21;
+}
+.shortcut .mobcode {
+	position: absolute;
+	left: 3px;
+	width: 66px;
+	height: 66px;
+	border: 1px solid #cfcfcf;
+}
+.shortcut .mobcode::before {
+	display: block;
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	top: -15px;
+	border: 10px solid transparent;
+	border-bottom-color: #f0f3ef;
+	z-index: 55;
+}
+.mobcode .mobcode_icon {
+	width: 60px;
+	height: 60px;
+	background: url(../image/index_w.png) no-repeat #f6f6f6;
+	margin: 4px auto;
+}
+.shortcut .triangle { /*********向下的 > 三角符号******/
+	padding: 0 20px 0 10px;
+	position: relative;
+}
+.shortcut .triangle i {
+	font: 400 12px/12px "宋体";
+	position: absolute;
+	top: 14px;
+	right: 8px;
+	width: 12px;
+	overflow: hidden;
+	height: 6px;
+}
+.shortcut .triangle s {
+	position: absolute;
+	top: -6px;
+	left: 0
+}
+/*** ******************* 头部导航end*******************/
+
+/*** header main****/
+.header .w {
+	height: 140px;
+	position: relative;
+}
+.header .w .logo {/***logo**/
+	position: absolute;
+	top: -31px;
+	left: 0;
+	z-index: 2;
+}
+.header .w .logo a {
+	display: block;
+	width: 190px;
+	height: 170px;
+	background: url(../image/sprite.head.png) no-repeat;
+	overflow: hidden;
+	font-size: 0;
+	box-shadow: 0 0 15px #ccc;
+}
+
+.header .search {/***search***/
+	position: relative;
+	height: 60px;
+	z-index: 1;
+}
+.search_logo {
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.search_logo a {
+	display: block;
+	width: 140px;
+	height: 60px;
+	background: url(../image/sprite.head.png) no-repeat -190px 0;
+}
+.form {
+	width: 550px;
+	height: 35px;
+	background: #fff;
+	position: absolute;
+	left: 300px;
+	bottom: 0;
+}
+.form input {
+	width: 450px;
+	height: 25px;
+	border: 1px solid transparent;
+	line-height: 25px;
+	font-size: 14px;
+	padding: 4px 44px 4px 4px;
+	color: #989898;
+}
+.form span {
+	position: absolute;
+	top: 10px;
+	right: 80px;
+	width: 19px;
+	height: 15px;
+	background: url(../image/sprite-photo-search.png) no-repeat 0 0
+}
+.form span:hover {
+	background-position: -30px 0;
+}
+.form button {
+	width: 50px;
+	height: 35px;
+	background: #f10215;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+}
+
+.header .shop_car {/***shopcar**/
+	position: absolute;
+	right: 100px;
+	top: 23px;
+	z-index: 11;
+	background: #fff;
+}
+.shop_car .shop {
+	width: 190px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #e3e4e5;
+	position: relative;
+}
+.shop .shop_icon {
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	font-size: 16px;
+}
+.shop a {
+	margin-left: 30px;
+}
+.shop .top {
+	position: absolute;
+	top: 5px;
+	left: 145px;
+	font-size: 12px;
+	background: #f10215;
+	padding: 1px;
+	line-height: 12px;
+	border-radius: 7px;
+	;
+	color: #fff;
+	min-width: 12px;
+}
+
+.hotwords {/***hotwords**/
+	width: 513px;
+	height: auto;
+	position: absolute;
+	left: 300px;
+	margin-top: 5px;
+}
+.hotwords a {
+	margin-right: 5px;
+}
+
+.navitems {/**navitems**/
+	position: absolute;
+	bottom: 0;
+	left: 200px;
+	height: 40px;
+	width: 790px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.navitems li {
+	float: left;
+}
+.navitems li a {
+	color: #333;
+	padding: 0 15px;
+}
+.navitems li a:hover{color: #c81623}
+
+.sale_Ad {/**右边的广告sale_Ad**/
+	width: 190px;
+	height: 40px;
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	background: pink;
+	background: url(../image/index_sale.png) no-repeat center;
+}
+.sale_Ad a {
+	display: block;
+	width: 190px;
+	height: 40px;
+}
+
+/************************ALL  header   end***********************/
+
+/***********footer**************************/
+.footer {
+	height: 580px;
+}
+.footer a:hover {
+	color: #f10215
+}
+.service {
+	border-bottom: 1px solid #dedede;
+	padding: 20px 0
+}
+.ser_pic {
+	width: 1190px;
+	height: 74px;
+	margin: 0 auto;
+	line-height: 74px;
+	;
+}
+.ser_pic li {
+	float: left;
+	width: 297px;
+	height: 42px;
+	position: relative;
+}
+.ser_pic h1 {
+	font-weight: 700;
+	font-size: 18px;
+	color: #333;
+	position: absolute;
+	left: 30%;
+}
+.ser_pic span {
+	position: absolute;
+	left: -25%;
+	top: 0;
+	margin-top: 17px;
+	width: 36px;
+	height: 40px;
+	overflow: hidden;
+	background: url(../image/index_footer.png) no-repeat 0 -156px
+}
+.ser_pic li:nth-child(2) span {
+	background-position: 0 -199px;
+}
+.ser_pic li:nth-child(3) span {
+	background-position: 0 -242px;
+}
+.ser_pic li:nth-child(4) span {
+	background-position: 0 -284px;
+}
+
+.service-main dl {/***service-main***/
+	width: 195px;
+	height: 160px;
+	float: left;
+	margin-top: 20px;
+}
+.service-main dt, range dt {
+	height: 30px;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+.service-main dd {
+	height: 20px;
+}
+.range {
+	width: 203px;
+	height: 130px;
+	background: url(../image/index_footer.png) no-repeat 0 0;
+	overflow: hidden;
+	padding-top: 20px;
+}
+.range dt {
+	text-align: center;
+}
+.range dd {
+	line-height: 1.6em;
+	margin-top: 5px;
+}
+.range dd p:last-of-type {
+	text-align: right;
+	font-family: "宋体";
+}
+.range dt, .service-main dd a, .range dd p a, .links a {
+	color: #666
+}
+
+.announce {/***copyright***/
+	margin-top: 20px;
+}
+.announce .w {
+	border-top: 1px solid #e1e1e1;
+	text-align: center;
+}
+.links {
+	padding: 10px 0
+}
+.links span {
+	color: #ccc;
+}
+.links a, .copyright span {
+	padding: 0 10px;
+}
+.copyright span {
+	color: #999;
+	line-height: 1.8em;
+}
+.copyright span i {
+	display: inline-block;
+	width: 18px;
+	height: 10px;
+	background: url(../image/index_footer.png) no-repeat right -120px;
+}
+.copyright .copyright_icon2 {
+	background-position: right -103px;
+}
+.copyright .copyright_icon3 {
+	background-position: right -136px;
+}
+.copyright_icon {
+	height: 120px;
+}
+.copyright_icon a {
+	display: inline-block;
+	width: 110px;
+	height: 33px;
+	margin-top: 44px;
+	background: url(../image/index_footer.png) no-repeat right 0;
+}

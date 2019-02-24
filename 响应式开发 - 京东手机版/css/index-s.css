@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* CSS Document */
+.jd-layout{
+	width: 100%;
+	/*最大宽度*/
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	height: 1500px;
+}
+/*头部搜索块这块有3种方式
+*1.flex:1 有兼容性，这个不选
+*2. 给中间元素添加margin:0 100px;  问题是中间这个元素不要设置具体的宽度，不然不起作用。
+*3. 给中间元素加padding ; width:100%; 
+*  一般选择第2种方式
+*/
+/*顶部搜索块*/
+.jd-search{
+	width: 100%;
+	height: 60px;
+	max-width: 640px;
+	position: fixed;
+	background:rgba(227,62,65,.2);
+	z-index: 99;
+}
+/**头部左边菜单导航*/
+.jd-menu{
+	width: 36px;
+	height: 26px;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	margin-top: -10px;
+	background: url(../img/meru.png) no-repeat;
+	background-size: 70%;;
+}
+/*头部右边*/
+.jd-info{
+	width: 40px;
+	height: 63px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -15px;
+	color: #fff;
+	background: url(../img/info.png) no-repeat;
+	background-size: 50%;
+}
+/*头部中间*/
+.jd-searchbox{
+	width: 100%;
+	height: 100%;
+	padding-left: 66px;
+	padding-right: 60px;
+}
+/*头部logo*/
+.jd-searchbox::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 80px;
+	width: 25px; 
+	height: 20px;
+	background: url(../img/jd-spirit.png) no-repeat 0 0;
+	background-size:250px 250px;
+}
+/*搜索图标*/
+.jd-searchbox::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	left: 125px;
+	width: 20px; 
+	height: 20px;
+	background: url(../img/jd-spirit.png) no-repeat -60px -109px;
+	background-size:200px 200px;
+
+}
+/*头部输入框*/
+.jd-searchbox > input{
+	width: 100%; 
+	height: 35px;
+	margin-top: 10px;
+	border-radius: 18px;
+	padding-left: 85px;
+	color: #666;
+	font-size: 16px;
+}
+
+/***********头部结束************************************************************************/
+
+/**轮播图**************************************************************************************/
+.jd-banner{ 
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.jd-banner .jd-slider{
+	width: 1000%;
+	position: relative;
+	left: -100%;
+}
+.jd-banner .jd-slider>li{
+	width: 10%;
+	float: left
+}
+
+.jd-banner .jd-slider li img{
+	width: 100%;
+}
+/*轮播图小圆点*/
+.jd-round{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+	text-align: center;
+}
+.jd-round li{
+	width: 6px; 
+	height: 6px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 2px;
+}
+.jd-round li.active{background-color: #fff;}
+
+
+
+/***导航部分******************************************/
+.jd-nav{
+	width: 100%;
+	position: relative;
+	top: -2%;
+	background-color: #fff;
+	padding: 10px 0 40px 0 ;
+	border-radius: 15px 15px 0 0;
+}
+.jd-list{
+	
+}
+.jd-list li{
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.jd-list li img{
+	/**图片大小根据业务的需求*/
+	width: 50px;
+}
+.jd-list li p{
+	line-height: 20px;
+}
+
+/***产品块**/
+.jd-product{
+	width: 100%;
+	margin-top: 0;
+}
+
+.hotnew{
+	width: 95%;
+	margin: -20px auto;
+	height: 30px;
+	background-color: #fff;
+	padding: 0 10px;
+	overflow: hidden;
+	border-radius: 6px;
+}
+.hotnew img{
+	width: 15%;
+}
+.hotnew .hotword{
+	font-size: 12px;
+}
+.hotnew i{
+	font-style: normal;
+	padding: 0 10px;
+	color: #e32322;
+}
+.hotnew .more{
+	border-left: 1px solid #ccc;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+.jd-ad{
+	width: 100%;
+	margin: 40px 0 20px 0;
+}
+.jd-ad a{display: block;}
+.jd-ad img{width: 100%;}
+
+/**秒杀**/
+.jd-seckill{
+	width: 100%;
+	background-color: #fff;
+}
+.jd-title{
+	padding: 10px 10px;
+}
+.jd-title strong{
+	font-size: 26px;
+	color: #e32322;
+}
+
+.kill-item2{
+	font-weight: 600;
+	padding: 0 10px;
+}
+.kill-item3 span{
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.kill-item4{
+	background: url(../img/arrow_rt.png) no-repeat right;
+	background-size: 12px 12px;
+	padding-right: 15px;
+	color:#e32322; 
+}
+.main-body{
+	width: 100%;
+	overflow: hidden;
+}
+.main-body ul li{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.main-body ul li img{
+	width: 100%;
+}
+
+.main-body ul li em{font-style: normal; color:#e32322; }
+.main-body ul li span:nth-of-type(1){
+	color: #e32322;
+	font-size: 16px;
+	font-weight: 600;
+}
+.main-body ul li span:nth-of-type(2){
+	text-decoration: line-through;
+}
+.floor-title{
+	width: 100%;
+	height: 60px;
+	margin-top: 10px;
+}
+.floor-title span{
+	height: 100%;
+    overflow: hidden;
+	display: block;
+	text-align: center;
+    margin: 0 auto;
+
+}
+
+.floor-title img{
+	width: auto;
+    max-height: 100%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

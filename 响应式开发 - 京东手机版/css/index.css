@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+.jd-app { /*总体*/
+	min-width: 300px;
+	max-width: 640px;
+	margin: 0 auto;
+	padding-bottom: 60px;
+}
+/*头部*/
+#jd-head {
+	width: 100%;
+	max-height: 60px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+#jd-head .head-body {/*头部身体*/
+	min-width: 300px;
+	max-width: 640px;
+	margin: 0 auto;
+	height: 60px;
+	background-color: rgba(239,45,48,.2);
+	position: relative;
+}
+#jd-head .head-body .jd-meru {
+	position: absolute;
+	left: 15px;
+	top: 20px;
+}
+#jd-head .head-body .jd-meru i {
+	display: block;
+	height: 32px;
+	width: 40px;
+	background: url(../img/meru.png) no-repeat;
+	background-size: 25px 20px
+}
+/*里面的内容需要用定位，width:100%,与父盒子同等，然后用padding隔开各元素*/
+/*表单部分*/
+#jd-head .head-body form {
+	width: 100%;
+	position: relative;
+	padding-left: 60px;
+	padding-right: 55px;
+}
+#jd-head .head-body form input {
+	width: 100%;
+	height: 40px;
+	border-radius: 25px;
+	margin-top: 10px;
+	padding-left: 100px;
+	font-size: 16px;
+}
+#jd-head .head-body form .icon-logo {
+	position: absolute;
+	left: 80px;
+	top: 20px;
+	width: 30px;
+	height: 20px;
+	background-size: 250px 250px;
+}
+#jd-head .head-body form .icon-search {
+	position: absolute;
+	left: 130px;
+	top: 20px;
+	background-position: -60px -109px;
+	width: 20px;
+	height: 20px;
+}
+/*头部登录*/
+#jd-head .head-body .login {
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+}
+/*头部结束*/
+
+/*轮播图*/
+#jd-arousel {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: -1;
+}
+#jd-arousel ul {
+	width: 1000%;
+}
+#jd-arousel ul li {
+	visibility: visible;
+	float: left;
+	width: 12.5%;
+}
+#jd-arousel ul li a, #jd-arousel ul li a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#jd-arousel ul li a img{
+	min-width: 400px;
+}
+#jd-arousel ol {
+	position: absolute;
+	width: 100%;
+	bottom: 40px;
+	text-align: center;
+}
+#jd-arousel ol li {
+	width: 6px;
+	height: 6px;
+	border: 1px solid #fff;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 2px;
+}
+
+/*nav导航*/
+ /*导航中的头部及底部广告*/
+.jd-nav {
+	width: 100%;
+	overflow: hidden;
+	margin-top: -20px;
+	position: relative;
+}
+.jd-nav .top a,
+.jd-nav .top a img,
+.jd-nav .bottom,
+.jd-nav .bottom img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.jd-nav .top a img {
+	border-radius: 5% 5% 0 0;
+}
+/*导航列表*/
+.jd-nav .navlist {
+	width: 100%;
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}
+/*20%宽度不够 只能设19%  末知原因*/
+.jd-nav .navlist a {
+	display: inline-block;
+	width: 19%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+@media (max-width:460px){
+	.jd-nav .navlist a {font-size: 12px;}
+}
+
+/*img宽度不能设100%；不然永远都是大图*/
+.jd-nav .navlist a img {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	vertical-align: top;
+	
+}
+
+
+
+
+
+
+
+
+/***footer***/
+.footer {
+	width: 100%;
+	height: 60px;
+	box-shadow: 0 -1px 1px 1px #ddd;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	background: #fff;
+	line-height: 60px;
+}
+.footer .icon {
+	width: 20%;
+	float: left;
+	font-size: 16px;
+}
+.footer .icon img{width: 20%;}
+
+
+
+
+
+
+
